@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML5 Elements Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #34495e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            padding: 12px;
+            margin-top: 10px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #dfe6e9;
+        }
+
+        input, select, textarea {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            display: inline;
+            width: auto;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: auto;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>HTML5 Elements Demonstration</h1>
+        <p>Web Technology Lab - Experiment 1</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#lists">Lists</a>
+        <a href="#table">Table</a>
+        <a href="#form">Form</a>
+        <a href="#media">Media</a>
+    </nav>
+
+    <main>
+
+        <!-- About Section -->
+        <section id="about">
+
+            <h2>About HTML5</h2>
+
+            <p>
+                HTML5 is used to create the structure of modern web pages.
+            </p>
+
+            <h3>Text Formatting</h3>
+
+            <p>
+                <b>Bold text</b>
+                <br>
+
+                <strong>Important text</strong>
+                <br>
+
+                <i>Italic text</i>
+                <br>
+
+                <em>Emphasized text</em>
+                <br>
+
+                <u>Underlined text</u>
+                <br>
+
+                <small>Small text</small>
+            </p>
+
+        </section>
+
+        <!-- Lists -->
+        <section id="lists">
+
+            <h2>Lists</h2>
+
+            <h3>Unordered List</h3>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <h3>Ordered List</h3>
+
+            <ol>
+                <li>Learn HTML</li>
+                <li>Learn CSS</li>
+                <li>Learn JavaScript</li>
+            </ol>
+
+        </section>
+
+        <!-- Image -->
+        <section>
+
+            <h2>Image</h2>
+
+            <img
+                src="WhatsApp Image 2026-02-19 at 21.42.41.jpeg"
+                alt="Sample Image"
+                width="300"
+            >
+
+        </section>
+
+        <!-- Table -->
+        <section id="table">
+
+            <h2>Student Information</h2>
+
+            <table>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Aarav</td>
+                    <td>CSE</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Diya</td>
+                    <td>ECE</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Rohan</td>
+                    <td>IT</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+        <!-- Form -->
+        <section id="form">
+
+            <h2>HTML5 Form</h2>
+
+            <form>
+
+                <label for="name">Name:</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                >
+
+                <label for="email">Email:</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                >
+
+                <label for="password">Password:</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                >
+
+                <label for="date">Date of Birth:</label>
+                <input
+                    type="date"
+                    id="date"
+                >
+
+                <label>Gender:</label>
+
+                <input type="radio" name="gender" id="male">
+                <label for="male">Male</label>
+
+                <input type="radio" name="gender" id="female">
+                <label for="female">Female</label>
+
+                <br><br>
+
+                <label>Skills:</label>
+
+                <input type="checkbox" id="html">
+                <label for="html">HTML</label>
+
+                <input type="checkbox" id="css">
+                <label for="css">CSS</label>
+
+                <input type="checkbox" id="javascript">
+                <label for="javascript">JavaScript</label>
+
+                <br><br>
+
+                <label for="course">Course:</label>
+
+                <select id="course">
+
+                    <option>CSE</option>
+                    <option>IT</option>
+                    <option>ECE</option>
+
+                </select>
+
+                <label for="message">Message:</label>
+
+                <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Enter your message"
+                ></textarea>
+
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+
+            </form>
+
+        </section>
+
+        <!-- Multimedia -->
+        <section id="media">
+
+            <h2>Multimedia</h2>
+
+            <h3>Audio</h3>
+
+            <audio controls>
+                <source src="Frozen_-_Let_It_Go_(mp3.pm).mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <h3>Video</h3>
+
+            <video width="400" controls>
+                <source src="WhatsApp Video 2026-08-09 at 10.02.45.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>Backend Development - Experiment 1</p>
+        
+
+    </footer>
+
+</body>
+
+</html>
