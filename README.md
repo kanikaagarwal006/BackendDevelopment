@@ -9,4 +9,4 @@ This repository contains my daily practice and projects for backend development.
 
 ## Lab Experiments
 - [`Experiment1/`](./Experiment1/):Create a web page with all possible elements of HTML5
-- day3/: Completed Experiment12A setup.
+- [`Experiment12A/`](./Experiment12A/): Completed Experiment12A setup.
