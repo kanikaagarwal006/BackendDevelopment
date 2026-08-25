@@ -3,3 +3,5 @@ node_modules/
 venv/
 **/venv/
 .DS_Store
+Experiment12B/node_modules
+todo-app/.env
