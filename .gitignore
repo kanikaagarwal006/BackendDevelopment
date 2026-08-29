@@ -6,3 +6,6 @@ venv/
 Experiment12B/node_modules
 todo-app/.env
 !fastapi-venv/main.py
+fastapi-venv/
+/package.json
+/package-lock.json
