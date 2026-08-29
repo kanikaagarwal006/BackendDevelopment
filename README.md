@@ -6,6 +6,9 @@ This repository contains my daily practice and projects for backend development.
 
 - [`day1/`](./day1/): Setup Node.js, Express server, and EJS templating engine.
 - [`day2/`](./day2/): Built a basic Flask server with a Hello World endpoint and configured a Python virtual environment.
+- [`day3/`](./day4/):Understand HTTP fundamentals, inspect request–response cycles, and design RESTful APIs and RESTful APIs and FastAPI
+- [`day4/`](./session-control/):session control mechanism, cookies,query strings
+- [`day5/`](./notes-app/):Build a fully functional Notes / Todo app using only frontend HTML/CSS/JS with localStorage for persistence.
 
 ## Lab Experiments
 - [`Experiment1/`](./Experiment1/):Create a web page with all possible elements of HTML5
