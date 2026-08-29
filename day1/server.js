@@ -13,8 +13,21 @@ app.get("/", (req, res) => {
     res.render("home");
 });
 
+// Updated to return JSON instead of EJS view
 app.get("/students", (req, res) => {
-    res.render("students", { students: students });
+    res.json(students);
+});
+
+// GET a single student by ID
+app.get("/students/:id", (req, res) => {
+  const studentId = parseInt(req.params.id);
+  const student = students.find((s) => s.id === studentId);
+
+  if (!student) {
+    return res.status(404).json({ error: "Student not found" });
+  }
+
+  res.json(student);
 });
 
 app.listen(3000, () => {
