@@ -1,0 +1,12 @@
+body {
+  background-color: lightblue;
+  font-family: Arial, sans-serif;
+}
+
+.row-even {
+  background-color: white;
+}
+
+.row-odd {
+  background-color: lightgray;
+}
