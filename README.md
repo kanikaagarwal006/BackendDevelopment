@@ -9,6 +9,7 @@ This repository contains my daily practice and projects for backend development.
 - [`day3/`](./day4/):Understand HTTP fundamentals, inspect request–response cycles, and design RESTful APIs and RESTful APIs and FastAPI
 - [`day4/`](./session-control/):session control mechanism, cookies,query strings
 - [`day5/`](./notes-app/):Build a fully functional Notes / Todo app using only frontend HTML/CSS/JS with localStorage for persistence.
+- [`day6/`](./ssr-demo/):Understand server-side rendering concepts and build dynamic web pages using templating engines.
 
 ## Lab Experiments
 - [`Experiment1/`](./Experiment1/):Create a web page with all possible elements of HTML5
