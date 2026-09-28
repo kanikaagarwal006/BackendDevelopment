@@ -1,9 +1,7 @@
 node_modules/
-
 **/node_modules/
 
 venv/
-
 **/venv/
 
 .DS_Store
@@ -13,9 +11,11 @@ Experiment12B/node_modules
 todo-app/.env
 
 !fastapi-venv/main.py
-
 fastapi-venv/
 
 /package.json
-
 /package-lock.json
+
+__pycache__/
+**/__pycache__/
+*.pyc
