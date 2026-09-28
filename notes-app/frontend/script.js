@@ -1,11 +1,25 @@
-const API_URL = '/api/notes';
+// LocalStorage-based substitute for API_URL
+const STORAGE_KEY = 'notes_app_data';
 
-async function renderNotes() {
+// Helper to retrieve notes from localStorage
+function getStoredNotes() {
+    try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (err) {
+        return [];
+    }
+}
+
+// Helper to save notes to localStorage
+function saveStoredNotes(notes) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(notes));
+}
+
+function renderNotes() {
     const container = document.getElementById("notesList");
 
     try {
-        const res = await fetch(API_URL);
-        const notes = await res.json();
+        const notes = getStoredNotes();
 
         if (notes.length === 0) {
             container.innerHTML = "<p>No notes yet.</p>";
@@ -30,7 +44,7 @@ async function renderNotes() {
                 }
                 <button
                     class="complete-btn"
-                    onclick="toggleComplete(${note.id}, ${note.completed})">
+                    onclick="toggleComplete(${note.id})">
                     ${note.completed ? "Mark Incomplete" : "Complete"}
                 </button>
                 <button
@@ -50,7 +64,7 @@ async function renderNotes() {
     }
 }
 
-async function addNote() {
+function addNote() {
     const input = document.getElementById("noteInput");
     const text = input.value.trim();
 
@@ -60,35 +74,46 @@ async function addNote() {
     }
 
     try {
-        const res = await fetch(API_URL, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ text })
-        });
+        const notes = getStoredNotes();
+        const newNote = {
+            id: Date.now(),
+            text: text,
+            completed: false,
+            createdAt: new Date().toISOString()
+        };
 
-        if (res.ok) {
-            input.value = "";
-            renderNotes();
-        }
+        notes.unshift(newNote);
+        saveStoredNotes(notes);
+
+        input.value = "";
+        renderNotes();
     } catch (err) {
         alert("Failed to add note.");
     }
 }
 
-async function toggleComplete(id, currentStatus) {
+function toggleComplete(id) {
     try {
-        await fetch(`${API_URL}/${id}`, {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ completed: !currentStatus })
+        const notes = getStoredNotes();
+        const updatedNotes = notes.map(note => {
+            if (note.id === id) {
+                return {
+                    ...note,
+                    completed: !note.completed,
+                    updatedAt: new Date().toISOString()
+                };
+            }
+            return note;
         });
+
+        saveStoredNotes(updatedNotes);
         renderNotes();
     } catch (err) {
         alert("Failed to update status.");
     }
 }
 
-async function editNote(id) {
+function editNote(id) {
     const newText = prompt("Edit your note:");
     if (newText === null) return;
 
@@ -99,20 +124,31 @@ async function editNote(id) {
     }
 
     try {
-        await fetch(`${API_URL}/${id}`, {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ text: updatedText })
+        const notes = getStoredNotes();
+        const updatedNotes = notes.map(note => {
+            if (note.id === id) {
+                return {
+                    ...note,
+                    text: updatedText,
+                    updatedAt: new Date().toISOString()
+                };
+            }
+            return note;
         });
+
+        saveStoredNotes(updatedNotes);
         renderNotes();
     } catch (err) {
         alert("Failed to edit note.");
     }
 }
 
-async function deleteNote(id) {
+function deleteNote(id) {
     try {
-        await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
+        const notes = getStoredNotes();
+        const filteredNotes = notes.filter(note => note.id !== id);
+
+        saveStoredNotes(filteredNotes);
         renderNotes();
     } catch (err) {
         alert("Failed to delete note.");
