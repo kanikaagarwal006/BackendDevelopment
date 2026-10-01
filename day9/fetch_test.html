@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FastAPI Fetch Test</title>
+</head>
+<body>
+
+    <h1>FastAPI Student Fetch Test</h1>
+
+    <script>
+        fetch("http://127.0.0.1:8000/students", {
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                name: "Rahul",
+                email: "rahul@example.com",
+                branch: "CSE",
+                enrollment_date: "2026-09-29"
+            })
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error("Error:", error));
+    </script>
+
+</body>
+</html>
