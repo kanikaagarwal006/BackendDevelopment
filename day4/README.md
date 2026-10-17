@@ -119,31 +119,31 @@ python app.py
 Add the paths below only if they match the filenames and locations of your existing GitHub screenshots.
 
 ### 1. Postman — Get All Students
-![GET all students](screenshots/01-postman-get-students.png)
+![GET all students](01-postman-get-students.png)
 
 ### 2. Postman — POST Request Error
-![POST request returning 404](screenshots/02-postman-post-students-404.png)
+![POST request returning 404](02-postman-post-students-404.png)
 
 ### 3. Express Server Running
-![Express server terminal](screenshots/03-express-server-terminal.png)
+![Express server terminal](03-express-server-terminal.png)
 
 ### 4. Postman — Get Student by ID
-![Get student by ID](screenshots/04-postman-single-student.png)
+![Get student by ID](04-postman-single-student.png)
 
 ### 5. Postman — Individual Student Request
-![Individual student request](screenshots/05-postman-single-student-request.png)
+![Individual student request](05-postman-single-student-request.png)
 
 ### 6. Flask Application Running
-![Flask home page and terminal](screenshots/06-flask-home-and-terminal.png)
+![Flask home page and terminal](06-flask-home-and-terminal.png)
 
 ### 7. Postman — Flask Students API
-![Flask students API response](screenshots/07-postman-flask-students.png)
+![Flask students API response](07-postman-flask-students.png)
 
 ### 8. Express Home Page
-![Express home page and terminal](screenshots/08-express-home-and-terminal.png)
+![Express home page and terminal](08-express-home-and-terminal.png)
 
 ### 9. Browser Network Inspection
-![Browser Network panel](screenshots/09-browser-network-response.png)
+![Browser Network panel](09-browser-network-response.png)
 
 ## Learning Outcomes
 - Understanding REST API endpoints.
