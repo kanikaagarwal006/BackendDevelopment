@@ -1,157 +1,89 @@
+
 # Day 3: Student Management API Testing
 
 ## Overview
-This project demonstrates testing a Student Management API using Express.js, Flask, Postman, and browser Developer Tools. It covers retrieving all students, retrieving a student by ID, and checking API responses.
+
+This folder contains the notes, diagrams, and screenshots from Day 4 of my Backend Development practice. It documents the Student Management API project built using Django and the API testing performed during development.
 
 ## Technologies Used
-- Node.js
-- Express.js
+
 - Python
-- Flask
-- Postman
-- JSON
-- Browser Developer Tools
+- Django
+- REST API
+- API Testing
 
-## Features
-- Retrieve all student records.
-- Retrieve a single student using their ID.
-- Return student details in JSON format.
-- Handle requests for students that do not exist.
-- Test API endpoints using Postman.
-- Inspect HTTP requests and responses.
+## Project Structure
 
-## Sample Student Data
-
-```json
-[
-  {
-    "id": 1,
-    "name": "Aarav",
-    "branch": "CSE"
-  },
-  {
-    "id": 2,
-    "name": "Diya",
-    "branch": "ECE"
-  },
-  {
-    "id": 3,
-    "name": "Rohan",
-    "branch": "IT"
-  }
-]
+```text
+day4/
+├── README.md
+├── image.png
+├── image copy.png
+├── image copy 2.png
+├── image copy 3.png
+├── image copy 4.png
+├── image copy 5.png
+├── image copy 6.png
+├── image copy 7.png
+└── image copy 8.png
 ```
-
-## API Endpoints
-
-| HTTP Method | Endpoint | Description |
-|---|---|---|
-| GET | `/students` | Retrieve all students |
-| GET | `/students/:id` | Retrieve a student by ID |
-| POST | `/students` | Tested in Postman; returned 404 because the shown Express server has no POST handler |
-
-### Example Requests
-
-**Get all students**
-```http
-GET http://localhost:3000/students
-```
-
-**Get a student by ID**
-```http
-GET http://localhost:3000/students/2
-```
-
-**Flask API — get all students**
-```http
-GET http://127.0.0.1:5000/students
-```
-
-## How to Run
-
-### Express.js
-1. Open the `day1` folder in the terminal.
-2. Install dependencies if required:
-
-```bash
-npm install
-```
-
-3. Start the server:
-
-```bash
-node server.js
-```
-
-4. Open `http://localhost:3000` in your browser.
-
-### Flask
-1. Open the `day2` folder in the terminal.
-2. Activate the virtual environment:
-
-```bash
-source venv/bin/activate
-```
-
-3. Install dependencies if required:
-
-```bash
-pip install -r requirements.txt
-```
-
-4. Run the application:
-
-```bash
-python app.py
-```
-
-5. Open `http://127.0.0.1:5000` in your browser.
-
-## Testing Results
-- The GET request for all students returned the student records.
-- The GET request for an individual student returned the matching record.
-- A request for a nonexistent student returned a student-not-found error.
-- The POST request to `/students` returned `404 Not Found` because the shown Express code does not define a POST route.
-- The browser Network panel showed a successful `200 OK` response for the students page.
 
 ## Screenshots
 
-Add the paths below only if they match the filenames and locations of your existing GitHub screenshots.
+### Screenshot 1
+![Screenshot 1](./image.png)
 
-### 1. Postman — Get All Students
-![GET all students](./01-postman-get-students.png)
+### Screenshot 2
+![Screenshot 2](./image%20copy.png)
 
-### 2. Postman — POST Request Error
-![POST request returning 404](./02-postman-post-students-404.png)
+### Screenshot 3
+![Screenshot 3](./image%20copy%202.png)
 
-### 3. Express Server Running
-![Express server terminal](./03-express-server-terminal.png)
+### Screenshot 4
+![Screenshot 4](./image%20copy%203.png)
 
-### 4. Postman — Get Student by ID
-![Get student by ID](./04-postman-single-student.png)
+### Screenshot 5
+![Screenshot 5](./image%20copy%204.png)
 
-### 5. Postman — Individual Student Request
-![Individual student request](./05-postman-single-student-request.png)
+### Screenshot 6
+![Screenshot 6](./image%20copy%205.png)
 
-### 6. Flask Application Running
-![Flask home page and terminal](./06-flask-home-and-terminal.png)
+### Screenshot 7
+![Screenshot 7](./image%20copy%206.png)
 
-### 7. Postman — Flask Students API
-![Flask students API response](./07-postman-flask-students.png)
+### Screenshot 8
+![Screenshot 8](./image%20copy%207.png)
 
-### 8. Express Home Page
-![Express home page and terminal](./08-express-home-and-terminal.png)
+### Screenshot 9
+![Screenshot 9](./image%20copy%208.png)
 
-### 9. Browser Network Inspection
-![Browser Network panel](./09-browser-network-response.png)
+## What I Practised
+
+- Setting up a Django project.
+- Running the Django development server.
+- Checking project configuration.
+- Accessing and testing an API endpoint.
+- Verifying API responses.
+- Documenting the development process with screenshots.
+
+## How to Run the Project
+
+1. Open the project folder in the terminal.
+2. Activate the virtual environment.
+3. Run the Django server:
+
+   ```bash
+   python manage.py runserver
+   ```
+
+4. Open the local URL displayed in the terminal.
+5. Access the API endpoint and verify the response.
 
 ## Learning Outcomes
-- Understanding REST API endpoints.
-- Using HTTP GET and POST requests.
-- Testing APIs using Postman.
-- Understanding JSON responses and HTTP status codes.
-- Retrieving individual records using route parameters.
-- Inspecting network requests using browser Developer Tools.
 
-## Conclusion
-This experiment provided practical experience in creating and testing student-related API endpoints, working with JSON responses, and identifying errors through Postman and browser Developer Tools.
+- Understood the basic structure of a Django project.
+- Learned how to run and verify a Django application.
+- Practised accessing API endpoints and checking responses.
+- Learned to document development work using screenshots.
+
+---
